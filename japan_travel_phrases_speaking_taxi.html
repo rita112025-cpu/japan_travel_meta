@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本旅遊常用會話｜可發音版</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #111827;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Noto Sans JP", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(246,247,251,.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    z-index: 1;
+  }
+  h1 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .note {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  h2 {
+    margin: 24px 0 10px;
+    font-size: 18px;
+    border-left: 5px solid var(--accent);
+    padding-left: 10px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 10px 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .zh {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .ja {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .romaji {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  button {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: var(--accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button:active {
+    transform: scale(.99);
+  }
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .toolbar button {
+    width: auto;
+    flex: 1;
+    background: #374151;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 12px;
+    padding: 24px 0 40px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>日本旅遊常用會話｜可發音版</h1>
+  <div class="note">點「發音」即可播放日文。若沒聲音，請確認手機音量與瀏覽器語音權限。</div>
+  <div class="toolbar">
+    <button onclick="setRate(0.8)">慢速</button>
+    <button onclick="setRate(1.0)">正常</button>
+    <button onclick="stopSpeak()">停止</button>
+  </div>
+</header>
+<main>
+  <h2>基本會話</h2>
+        <div class="card">
+          <div class="zh">你好</div>
+          <div class="ja">こんにちは</div>
+          <div class="romaji">Konnichiwa</div>
+          <button onclick="speak(&#x27;こんにちは&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">謝謝</div>
+          <div class="ja">ありがとうございます</div>
+          <div class="romaji">Arigatou gozaimasu</div>
+          <button onclick="speak(&#x27;ありがとうございます&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">不好意思／請問</div>
+          <div class="ja">すみません</div>
+          <div class="romaji">Sumimasen</div>
+          <button onclick="speak(&#x27;すみません&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">我不懂日文</div>
+          <div class="ja">日本語がわかりません</div>
+          <div class="romaji">Nihongo ga wakarimasen</div>
+          <button onclick="speak(&#x27;日本語がわかりません&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">可以說英文嗎？</div>
+          <div class="ja">英語を話せますか？</div>
+          <div class="romaji">Eigo o hanasemasu ka?</div>
+          <button onclick="speak(&#x27;英語を話せますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>餐廳常用</h2>
+        <div class="card">
+          <div class="zh">我要這個</div>
+          <div class="ja">これをお願いします</div>
+          <div class="romaji">Kore o onegaishimasu</div>
+          <button onclick="speak(&#x27;これをお願いします&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">有中文菜單嗎？</div>
+          <div class="ja">中国語のメニューはありますか？</div>
+          <div class="romaji">Chuugokugo no menyuu wa arimasu ka?</div>
+          <button onclick="speak(&#x27;中国語のメニューはありますか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">結帳</div>
+          <div class="ja">お会計お願いします</div>
+          <div class="romaji">Okaikei onegaishimasu</div>
+          <button onclick="speak(&#x27;お会計お願いします&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">好吃</div>
+          <div class="ja">おいしいです</div>
+          <div class="romaji">Oishii desu</div>
+          <button onclick="speak(&#x27;おいしいです&#x27;)">▶ 發音</button>
+        </div>
+        <h2>購物常用</h2>
+        <div class="card">
+          <div class="zh">多少錢？</div>
+          <div class="ja">いくらですか？</div>
+          <div class="romaji">Ikura desu ka?</div>
+          <button onclick="speak(&#x27;いくらですか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">可以刷卡嗎？</div>
+          <div class="ja">クレジットカードは使えますか？</div>
+          <div class="romaji">Kurejitto kaado wa tsukaemasu ka?</div>
+          <button onclick="speak(&#x27;クレジットカードは使えますか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">可以退稅嗎？</div>
+          <div class="ja">免税できますか？</div>
+          <div class="romaji">Menzei dekimasu ka?</div>
+          <button onclick="speak(&#x27;免税できますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>交通常用</h2>
+        <div class="card">
+          <div class="zh">○○站在哪裡？</div>
+          <div class="ja">○○駅はどこですか？</div>
+          <div class="romaji">○○ eki wa doko desu ka?</div>
+          <button onclick="speak(&#x27;○○駅はどこですか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">我要去東京站</div>
+          <div class="ja">東京駅へ行きたいです</div>
+          <div class="romaji">Toukyou eki e ikitai desu</div>
+          <button onclick="speak(&#x27;東京駅へ行きたいです&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">這班車有到嗎？</div>
+          <div class="ja">この電車は行きますか？</div>
+          <div class="romaji">Kono densha wa ikimasu ka?</div>
+          <button onclick="speak(&#x27;この電車は行きますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>叫計程車／大行李</h2>
+        <div class="card">
+          <div class="zh">我有大行李，請給我大一點的計程車。</div>
+          <div class="ja">大きいスーツケースがあります。大きめのタクシーをお願いします。</div>
+          <div class="romaji">Ōkii sūtsukēsu ga arimasu. Ōkime no takushī o onegaishimasu.</div>
+          <button onclick="speak(&#x27;大きいスーツケースがあります。大きめのタクシーをお願いします。&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">有廂型計程車嗎？</div>
+          <div class="ja">ワゴンタクシーはありますか？</div>
+          <div class="romaji">Wagōn takushī wa arimasu ka?</div>
+          <button onclick="speak(&#x27;ワゴンタクシーはありますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>飯店常用</h2>
+        <div class="card">
+          <div class="zh">我要辦理入住</div>
+          <div class="ja">チェックインをお願いします</div>
+          <div class="romaji">Chekku in o onegaishimasu</div>
+          <button onclick="speak(&#x27;チェックインをお願いします&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">我要退房</div>
+          <div class="ja">チェックアウトをお願いします</div>
+          <div class="romaji">Chekku auto o onegaishimasu</div>
+          <button onclick="speak(&#x27;チェックアウトをお願いします&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">有 Wi‑Fi 嗎？</div>
+          <div class="ja">Wi-Fiはありますか？</div>
+          <div class="romaji">Wai fai wa arimasu ka?</div>
+          <button onclick="speak(&#x27;Wi-Fiはありますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>藥妝店／眼藥水</h2>
+        <div class="card">
+          <div class="zh">我的眼睛乾，而且會畏光。有適合的眼藥水嗎？</div>
+          <div class="ja">目が乾いて、まぶしさを感じます。これに合う目薬はありますか？</div>
+          <div class="romaji">Me ga kawaite, mabushisa o kanjimasu. Kore ni au megusuri wa arimasu ka?</div>
+          <button onclick="speak(&#x27;目が乾いて、まぶしさを感じます。これに合う目薬はありますか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">有對乾眼和畏光有效的眼藥水嗎？</div>
+          <div class="ja">ドライアイとまぶしさに効く目薬はありますか？</div>
+          <div class="romaji">Dorai ai to mabushisa ni kiku megusuri wa arimasu ka?</div>
+          <button onclick="speak(&#x27;ドライアイとまぶしさに効く目薬はありますか？&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">戴隱形眼鏡也可以用嗎？</div>
+          <div class="ja">コンタクトレンズでも使えますか？</div>
+          <div class="romaji">Kontakuto renzu demo tsukaemasu ka?</div>
+          <button onclick="speak(&#x27;コンタクトレンズでも使えますか？&#x27;)">▶ 發音</button>
+        </div>
+        <h2>緊急備用</h2>
+        <div class="card">
+          <div class="zh">請幫幫我</div>
+          <div class="ja">助けてください</div>
+          <div class="romaji">Tasukete kudasai</div>
+          <button onclick="speak(&#x27;助けてください&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">我迷路了</div>
+          <div class="ja">道に迷いました</div>
+          <div class="romaji">Michi ni mayoimashita</div>
+          <button onclick="speak(&#x27;道に迷いました&#x27;)">▶ 發音</button>
+        </div>
+        
+        <div class="card">
+          <div class="zh">請叫警察</div>
+          <div class="ja">警察を呼んでください</div>
+          <div class="romaji">Keisatsu o yonde kudasai</div>
+          <button onclick="speak(&#x27;警察を呼んでください&#x27;)">▶ 發音</button>
+        </div>
+        
+  <footer>
+    提醒：畏光若合併眼痛、紅眼、視力模糊、單眼突然加重，建議直接看眼科，不要只靠眼藥水。
+  </footer>
+</main>
+<script>
+let speechRate = 0.9;
+
+function setRate(rate) {
+  speechRate = rate;
+}
+
+function stopSpeak() {
+  window.speechSynthesis.cancel();
+}
+
+function speak(text) {
+  if (!("speechSynthesis" in window)) {
+    alert("此瀏覽器不支援語音播放，請改用 Chrome、Safari 或 Edge。");
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ja-JP";
+  utterance.rate = speechRate;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  const voices = window.speechSynthesis.getVoices();
+  const jaVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith("ja"));
+  if (jaVoice) utterance.voice = jaVoice;
+
+  window.speechSynthesis.speak(utterance);
+}
+
+window.speechSynthesis.onvoiceschanged = () => {
+  window.speechSynthesis.getVoices();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沖繩美食導航</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;background:#f5f4f0;color:#1a1a1a;padding:1rem;max-width:700px;margin:0 auto}
+h1{font-size:18px;font-weight:600;margin:1rem 0 0.25rem}
+.subtitle{font-size:13px;color:#888;margin-bottom:1.25rem}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.07em;color:#aaa;text-transform:uppercase;padding:.75rem 0 .5rem;display:flex;align-items:center;gap:6px}
+.section-label::after{content:'';flex:1;height:0.5px;background:#ddd}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:.5rem}
+.card{background:#fff;border:1px solid #eee;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.card-top{display:flex;align-items:flex-start;gap:10px}
+.icon{font-size:22px;line-height:1.2;flex-shrink:0}
+.name{font-size:14px;font-weight:600;line-height:1.35;color:#111}
+.sub{font-size:12px;color:#888;line-height:1.5;margin-top:2px}
+.meta{display:flex;flex-direction:column;gap:3px;margin-top:4px;padding-top:8px;border-top:1px solid #f0f0f0}
+.meta-row{display:flex;align-items:flex-start;gap:5px;font-size:11.5px;color:#aaa;line-height:1.4}
+.meta-row svg{flex-shrink:0;margin-top:1px}
+.mapcode{font-family:monospace;background:#f5f5f5;color:#555;padding:1px 5px;border-radius:4px;font-size:11px}
+.btn-row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;border:1px solid #e5e5e5;background:#fff;color:#444;cursor:pointer;text-decoration:none;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.btn:active{background:#f5f5f5}
+.btn.map{background:#0066cc;color:#fff;border-color:transparent}
+.btn.map:active{background:#0055aa}
+</style>
+</head>
+<body>
+
+<h1>🗾 沖繩美食導航</h1>
+<p class="subtitle">一鍵開啟 Google Maps・含 MAPCODE 車機導航</p>
+
+<div class="section-label">南部・那霸區域</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍙</span>
+      <div>
+        <div class="name">豬肉蛋飯糰</div>
+        <div class="sub">牧志市場・炸蝦豬肉蛋飯糰</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        07:00–19:00
+      </div>
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="mapcode">33 157 323*00</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=ポーたま+牧志市場店+那覇" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🐟</span>
+      <div>
+        <div class="name">糸滿・泊港・牧志市場</div>
+        <div class="sub">生魚片・烤生蠔・海鮮丼，無需預約</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        糸滿建議安排 Day 4 午餐
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=糸満漁業協同組合+魚市場" target="_blank">📍 糸滿</a>
+      <a class="btn map" href="https://maps.google.com/?q=泊いゆまち+那覇" target="_blank">📍 泊港</a>
+      <a class="btn map" href="https://maps.google.com/?q=那覇市第一牧志公設市場" target="_blank">📍 牧志</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍜</span>
+      <div>
+        <div class="name">暖暮拉麵</div>
+        <div class="sub">那霸國際通・豚骨・適合當宵夜</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        平日 11:00–02:00・假日 10:00–02:00
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=暖暮+那覇国際通り店" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">北部・古宇利島・名護・本部町</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍤</span>
+      <div>
+        <div class="name">古宇利蝦飯 Kouri Shrimp</div>
+        <div class="sub">古宇利島・蝦蝦飯・看海景</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        11:00–18:00（週二公休）
+      </div>
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="mapcode">485 692 203*74</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=Kouri+Shrimp+古宇利島" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍔</span>
+      <div>
+        <div class="name">Captain Kangaroo</div>
+        <div class="sub">本部町・美式大漢堡・現場排隊</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        11:00–17:00（常提早完售，建議早去）
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=キャプテンカンガルー+本部町" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍜</span>
+      <div>
+        <div class="name">岸本食堂</div>
+        <div class="sub">本部町・百年沖繩麵・紅瓦老宅</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        11:00–17:00（本店週三公休）
+      </div>
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        本店 <span class="mapcode">206 857 712*58</span>
+      </div>
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        分店 <span class="mapcode">206 859 346*30</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=岸本食堂+本部町" target="_blank">📍 本店</a>
+      <a class="btn map" href="https://maps.google.com/?q=岸本食堂+八重岳" target="_blank">📍 八重岳店</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍱</span>
+      <div>
+        <div class="name">名護 Yukino（雪乃）</div>
+        <div class="sub">名護・炸蝦定食・在地家庭料理</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        17:00–21:30（週三公休）
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=雪乃+名護+沖縄" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">中部・美國村・港川外人住宅</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🌮</span>
+      <div>
+        <div class="name">Kijimuna 塔可飯</div>
+        <div class="sub">美國村 Depot Island・歐姆蛋塔可飯</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        11:00–22:00
+      </div>
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="mapcode">33 525 383*28</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=キジムナー+Depot+Island+北谷" target="_blank">📍 Google Maps</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <span class="icon">🍰</span>
+      <div>
+        <div class="name">Houki Boshi ＆ oHacorte</div>
+        <div class="sub">港川外人住宅・黑糖可麗露・水果塔</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        熱門口味晚去會售完
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn map" href="https://maps.google.com/?q=Hōki+Boshi+港川外人住宅" target="_blank">📍 Houki Boshi</a>
+      <a class="btn map" href="https://maps.google.com/?q=oHacorte+浦添+港川" target="_blank">📍 oHacorte</a>
+    </div>
+  </div>
+
+</div>
+
+<p style="font-size:11px;color:#bbb;text-align:center;padding:1.5rem 0 .5rem">MAPCODE 請手動輸入車機導航・資訊以出發前確認為準</p>
+
+</body>
+</html>
