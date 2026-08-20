@@ -11,12 +11,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{
-  --ink:#FFE66D;
+  --ink:#073B4C !important;
+  --paper:#FFFBEB !important;
+  --card:#FFFFFF !important;
+  --sunny:#FFE66D !important;
+  --sunny-deep:#FFB74D !important;
   --blue:#0E7C86;
-  --line:#8FD9CF;
+  --line:#FFB74D;
   --grid:rgba(14,124,134,.09);
-  --paper:#F4FAF9;
-  --card:#FFFFFF;
   --brick:#DB7A34;
   --moss:#4A6B4F;
   --muted:#33555A;
@@ -39,53 +41,50 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 :focus-visible{outline:2px solid var(--brick);outline-offset:2px}
 
-/* ---------- 藍晒圖底紋（signature） ---------- */
+/* ---------- 陽光黃 header ---------- */
 .blueprint{
-  background-color:var(--ink);
-  background-image:
-    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
-  background-size:22px 22px;
-  color:#fff;
+  background-color:var(--sunny) !important;
+  background-image:none !important;
+  color:#073B4C !important;
 }
 
 /* ---------- 標題欄（工程圖 title block） ---------- */
 .hero{padding:26px 18px 20px;position:relative}
 .hero .eyebrow{
   font-family:var(--mono);font-size:13px;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--line);margin:0 0 14px
+  text-transform:uppercase;color:#073B4C;margin:0 0 14px
 }
 .hero h1{
   margin:0;font-size:clamp(46px,17vw,72px);line-height:.92;
-  font-weight:700;letter-spacing:.02em
+  font-weight:700;letter-spacing:.02em;color:#073B4C
 }
 .hero .h1-en{
   font-family:var(--mono);font-size:14px;letter-spacing:.42em;
-  color:var(--line);margin:10px 0 0
+  color:#073B4C;margin:10px 0 0
 }
 .titleblock{
-  margin-top:22px;border:1px solid rgba(255,255,255,.35);
+  margin-top:22px;border:1px solid rgba(7,59,76,.28);
   display:grid;grid-template-columns:repeat(3,1fr)
 }
-.titleblock div{padding:9px 10px;border-right:1px solid rgba(255,255,255,.22)}
+.titleblock div{padding:9px 10px;border-right:1px solid rgba(7,59,76,.18)}
 .titleblock div:last-child{border-right:0}
 .titleblock dt{
   font-family:var(--mono);font-size:11px;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--line);margin:0
+  text-transform:uppercase;color:#073B4C;margin:0
 }
-.titleblock dd{margin:3px 0 0;font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+.titleblock dd{margin:3px 0 0;font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;color:#073B4C}
 
 /* ---------- 通用 ---------- */
 .wrap{padding:18px 16px 8px}
 .sec-head{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px}
 .sec-head:first-child{margin-top:8px}
-.sec-head h2{margin:0;font-size:19px;font-weight:700;letter-spacing:.02em}
+.sec-head h2{margin:0;font-size:19px;font-weight:700;letter-spacing:.02em;color:#073B4C}
 .sec-head span{
   font-family:var(--mono);font-size:12px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--muted)
 }
 .card{
-  background:var(--card);border:1px solid rgba(14,124,134,.16);
+  background:var(--card);color:#073B4C;border:1px solid rgba(0,0,0,.08);
   border-radius:2px;box-shadow:0 1px 0 rgba(7,59,76,.04)
 }
 .note{font-size:14.5px;color:var(--muted);margin:6px 0 0}
@@ -94,13 +93,13 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 /* ---------- 首頁入口 ---------- */
 .hub{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
 .hub button{
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);
+  background:rgba(7,59,76,.06);border:1px solid rgba(7,59,76,.25);
   padding:14px 6px;text-align:center;border-radius:2px
 }
-.hub b{display:block;font-size:14.5px;font-weight:600}
+.hub b{display:block;font-size:14.5px;font-weight:600;color:#073B4C}
 .hub small{
   display:block;font-family:var(--mono);font-size:10.5px;
-  letter-spacing:.12em;color:var(--line);margin-top:4px
+  letter-spacing:.12em;color:#073B4C;margin-top:4px
 }
 
 /* ---------- 交通卡（車票樣式） ---------- */
@@ -275,10 +274,10 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 .tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--muted)}
 .tabbar button b{font-size:12.5px;font-weight:600}
 .tabbar button small{font-family:var(--mono);font-size:9px;letter-spacing:.1em}
-.tabbar button[aria-current="page"]{color:var(--ink)}
+.tabbar button[aria-current="page"]{color:#A85D00}
 .tabbar button[aria-current="page"] b{position:relative}
 .tabbar button[aria-current="page"] b::after{
-  content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--brick)
+  content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:#E68A00
 }
 
 .view{display:none}
